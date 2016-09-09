@@ -39,5 +39,6 @@
         android:text="@string/donateButton"
         android:id="@+id/donateButton"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"/>
+
 </RelativeLayout>

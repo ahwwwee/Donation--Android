@@ -12,8 +12,9 @@ public class Donate extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        donateButton = (button)findViewById(R.id.donateButton);
+
         super.onCreate(savedInstanceState);
+        donateButton = (Button)findViewById(R.id.donateButton);
         setContentView(R.layout.activity_donate);
         if(donateButton != null){
             Log.v("Donate", "Really got the donate button");
@@ -25,12 +26,4 @@ public class Donate extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.menu_donate,menu);
     }
 
-    @Override
-    public boolean anOptionsItemSelected(MenuItem item){
-        int id = iten.getItemId();
-        if(id == R.id.action_settings){
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
 }
