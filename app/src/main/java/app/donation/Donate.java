@@ -1,5 +1,6 @@
-package com.example.donation;
+package app.donation;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -10,6 +11,10 @@ import android.view.View;
 import android.widget.RadioGroup;
 import android.widget.NumberPicker;
 import android.widget.ProgressBar;
+import android.widget.Toast;
+import android.content.Intent;
+
+import app.donation.R;
 
 public class Donate extends AppCompatActivity {
 
@@ -56,11 +61,12 @@ public class Donate extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item){
-        int id = item.getItemId();
-        if(id == R.id.action_settings){
-            return true;
+        switch(item.getItemId()) {
+            case R.id.menuReport : startActivity(new Intent(this, Report.class));
+            break;
         }
-        return super.onOptionsItemSelected(item);
+        return true;
+
     }
 
 }

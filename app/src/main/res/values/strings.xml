@@ -7,4 +7,7 @@
 
     <string name="payPal">Pay Pal</string>
     <string name="direct">Direct</string>
+
+    <string name="menuReport">Report</string>
+    <string name="reportTitle">Report</string>
 </resources>
