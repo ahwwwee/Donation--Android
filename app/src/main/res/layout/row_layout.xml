@@ -9,19 +9,22 @@
     tools:context="app.donation.Donate">
 
     <TextView
-        android:id="@+id/reportTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/reportTitle"
+        android:id="@+id/row_amount"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/defaultAmount"/>
 
-    <ListView
-        android:layout_width="match_parent"
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/reportList"
-        android:layout_below="@+id/reportTitle"
-        android:layout_alignParentStart="true" />
+        android:id="@+id/row_method"
+        android:layout_alignBaseline="@+id/row_amount"
+        android:layout_alignBottom="@+id/row_amount"
+        android:layout_marginLeft="106dp"
+        android:text="@string/defaultMethod"/>
 
 </RelativeLayout>

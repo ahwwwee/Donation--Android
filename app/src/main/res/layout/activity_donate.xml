@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -73,13 +72,55 @@
         android:layout_alignRight="@+id/donateSubTitle"
         android:layout_alignTop="@+id/donateSubTitle" />
 
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/amountText"
+        android:layout_above="@+id/donateButton"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentRight="true"
+        android:ems="10"
+        android:inputType="number">
+        <requestFocus/>
+    </EditText>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:id="@+id/amountLabel"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/amountText"
+        android:layout_alignLeft="@+id/paymentMethod"
+        android:labelFor="@+id/amountText"
+        android:text="@string/amount"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/donateButton"
         android:id="@+id/donateButton"
+        android:onClick="donateButtonPressed"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:onClick="donateButtonPressed"/>
+        android:layout_alignParentLeft="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/amountTotal"
+        android:text="@string/initialAmount"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_alignTop="@+id/donateButton"
+        android:layout_toEndOf="@+id/donateButton" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/totalLabel"
+        android:layout_alignBottom="@+id/amountTotal"
+        android:layout_alignBaseline="@+id/amountTotal"
+        android:layout_toLeftOf="@+id/amountPicker"
+        android:text="@string/amountSoFarLabel"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
 
 </RelativeLayout>

@@ -4,10 +4,15 @@
     <string name="donateTitle">Welcome Homer</string>
     <string name="donateSubtitle">Please give generously</string>
     <string name="donateButton">Donate</string>
+    <string name="amount">Amount:</string>
 
     <string name="payPal">Pay Pal</string>
     <string name="direct">Direct</string>
-
     <string name="menuReport">Report</string>
     <string name="reportTitle">Report</string>
+    <string name="amountSoFarLabel">Total So Far</string>
+    <string name="initialAmount">Total So Far</string>
+    <string name="defaultAmount">00</string>
+    <string name="defaultMethod">N/A</string>
+
 </resources>
