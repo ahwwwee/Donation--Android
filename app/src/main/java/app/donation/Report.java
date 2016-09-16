@@ -3,8 +3,11 @@ package app.donation;
 import app.donation.R;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -32,6 +35,24 @@ public class Report extends AppCompatActivity {
         DonationAdapter adapter = new DonationAdapter(this, app.donations);
         listView.setAdapter(adapter);
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu)
+    {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_report, menu);
+        return true;
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item)
+    {
+        switch (item.getItemId())
+        {
+            case R.id.menuDonate : startActivity (new Intent(this, Donate.class));
+                break;
+        }
+        return true;
+    }
 }
 
 class DonationAdapter extends ArrayAdapter<Donation>{
@@ -45,7 +66,7 @@ class DonationAdapter extends ArrayAdapter<Donation>{
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent){
+    public View getView(int position, View convertView, ViewGroup parent) {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
         View view = inflater.inflate(R.layout.row_layout, parent, false);

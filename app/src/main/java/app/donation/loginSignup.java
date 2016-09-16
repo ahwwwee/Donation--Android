@@ -3,16 +3,8 @@ package app.donation;
 import android.os.Bundle;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.RadioGroup;
-import android.widget.NumberPicker;
-import android.widget.ProgressBar;
-import android.widget.TextView;
 
 /**
  * Created by ari on 16/09/2016.
@@ -25,16 +17,16 @@ public class loginSignup extends AppCompatActivity {
         setContentView(R.layout.activity_loginsignup);
     }
 
-    public boolean loginRender(View v)
+    public boolean loginRender()
     {
-        Intent intent = new Intent(this, Report.class);
+        Intent intent = new Intent(this, login.class);
         startActivity(intent);
         return true;
     }
 
-    public boolean signupRender(View v)
+    public boolean signupRender()
     {
-        Intent intent = new Intent(this, Donate.class);
+        Intent intent = new Intent(this, Signup.class);
         startActivity(intent);
         return true;
     }

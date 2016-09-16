@@ -6,7 +6,6 @@
     <string name="donateSubtitle">Please give generously</string>
     <string name="donateButton">Donate</string>
     <string name="amount">Amount:</string>
-
     <string name="payPal">Pay Pal</string>
     <string name="direct">Direct</string>
     <string name="menuReport">Report</string>
@@ -15,8 +14,16 @@
     <string name="initialAmount">amount</string>
     <string name="defaultAmount">00</string>
     <string name="defaultMethod">N/A</string>
-
     <string name="login">Log In</string>
     <string name="signup">Sign Up</string>
-
+    <string name="regTitle">Register for Donation</string>
+    <string name="fName">First Name:</string>
+    <string name="lName">Last Name:</string>
+    <string name="email">Email:</string>
+    <string name="password">Password:</string>
+    <string name="register">Register</string>
+    <string name="loginTitle">Log into your Account</string>
+    <string name="signin">Sign In</string>
+    <string name="logEmailTitle">Email</string>
+    <string name="logPassTitle">Password</string>
 </resources>

@@ -21,6 +21,12 @@
         <activity android:name="app.donation.Report"
                   android:label="@string/donateTitle">
         </activity>
+        <activity android:name="app.donation.Signup"
+            android:label="Signup">
+        </activity>
+        <activity android:name="app.donation.login"
+            android:label="Log In">
+        </activity>
     </application>
 
 </manifest>
