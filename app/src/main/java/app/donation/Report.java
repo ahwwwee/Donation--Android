@@ -26,7 +26,9 @@ public class Report extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_report);
 
-        app = (DonationApp) findViewById(R.id.reportList);
+        app = (DonationApp) getApplication();
+
+        listView = (ListView) findViewById(R.id.reportList);
         DonationAdapter adapter = new DonationAdapter(this, app.donations);
         listView.setAdapter(adapter);
     }
@@ -36,7 +38,7 @@ class DonationAdapter extends ArrayAdapter<Donation>{
     private Context context;
     public List<Donation> donations;
 
-    public donationAdapter(Context context, List<Donation> donations) {
+    public DonationAdapter(Context context, List<Donation> donations) {
         super(context, R.layout.row_layout, donations);
         this.context = context;
         this.donations = donations;
@@ -53,10 +55,13 @@ class DonationAdapter extends ArrayAdapter<Donation>{
 
         amountView.setText("" + donation.amount);
         methodView.setText(donation.method);
+
+        return view;
     }
 
     @Override
     public int getCount(){
+
         return donations.size();
     }
 }
