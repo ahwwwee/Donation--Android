@@ -61,7 +61,6 @@ class DonationAdapter extends ArrayAdapter<Donation>{
 
     @Override
     public int getCount(){
-
         return donations.size();
     }
 }

@@ -64,9 +64,9 @@ public class Donate extends AppCompatActivity
     {
         String method = paymentMethod.getCheckedRadioButtonId() == R.id.payPal ? "PayPal" : "Direct";
         int donatedAmount =  amountPicker.getValue();
+        String text = amountText.getText().toString();
         if (donatedAmount == 0)
         {
-            String text = amountText.getText().toString();
             if (!text.equals(""))
                 donatedAmount = Integer.parseInt(text);
         }
@@ -76,7 +76,10 @@ public class Donate extends AppCompatActivity
             progressBar.setProgress(app.totalDonated);
             String totalDonatedStr = "$" + app.totalDonated;
             amountTotal.setText(totalDonatedStr);
+            amountText.setText("");
+            amountPicker.setValue(0);
         }
+
     }
 
     @Override
@@ -85,6 +88,8 @@ public class Donate extends AppCompatActivity
         switch (item.getItemId())
         {
             case R.id.menuReport : startActivity (new Intent(this, Report.class));
+                break;
+            case R.id.menuDonate : startActivity (new Intent(this, Donate.class));
                 break;
         }
         return true;
