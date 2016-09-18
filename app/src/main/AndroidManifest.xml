@@ -9,24 +9,31 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:name="app.donation.DonationApp">
+
+
         <activity android:name="app.donation.loginSignup">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity android:name="app.donation.Donate"
             android:label="@string/donateTitle">
         </activity>
+
         <activity android:name="app.donation.Report"
                   android:label="@string/donateTitle">
         </activity>
+
         <activity android:name="app.donation.Signup"
             android:label="Signup">
         </activity>
+
         <activity android:name="app.donation.login"
             android:label="Log In">
         </activity>
+
     </application>
 
 </manifest>

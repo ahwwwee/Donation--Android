@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 /**
  * Created by ahwww on 16/09/2016.
  */
-public class User extends AppCompatActivity{
+public class User {
     String firstName;
     String lastName;
     String email;

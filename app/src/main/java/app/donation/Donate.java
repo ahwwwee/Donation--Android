@@ -89,7 +89,7 @@ public class Donate extends AppCompatActivity
         {
             case R.id.menuReport : startActivity (new Intent(this, Report.class));
                 break;
-            case R.id.menuDonate : startActivity (new Intent(this, Donate.class));
+            case R.id.menuWelcome : startActivity (new Intent(this, loginSignup.class));
                 break;
         }
         return true;

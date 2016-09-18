@@ -13,6 +13,7 @@ public class DonationApp extends Application {
     public final int target = 10000;
     public int totalDonated = 0;
     public List<Donation> donations = new ArrayList<Donation>();
+    public List<User> users = new ArrayList<>();
 
     public boolean newDonation(Donation donation){
         boolean targetAchieved = totalDonated > target;
@@ -31,5 +32,18 @@ public class DonationApp extends Application {
     public void onCreate(){
         super.onCreate();
         Log.v("Donate", "Donation App Started");
+    }
+
+    public void addUser(User user){
+        users.add(user);
+    }
+
+    public boolean findByEmail(String email, String password){
+        for(User u : users){
+            if(email.equals(u.email) && password.equals(u.password)){
+                return true;
+            }
+        }
+        return false;
     }
 }
